@@ -1,0 +1,30 @@
+<!--
+  albumId:专辑ID
+  id:索引
+  title: 标题
+  content:副标题
+  fileSize: 文件大小
+  trackLength:文件长度
+  createTime: 创建时间
+  updateTime: 更新时间
+  url:地址
+-->
+
+<template name="collectionCell">
+  <view class="courseBackgroundView">
+    <view class="courseImageBgView">
+      <image class="courseImageView" src="{{item.coverUrl}}"></image>
+    </view>
+    <view class="descriptionView">
+      <view class="detailView">
+        <label class="courseTitle">{{item.title}}</label>
+        <label class="courseDetail">{{item.content}}</label>
+      </view>
+      <view class="bottomView">
+        <label class="timeText">{{item.minute}}分{{item.trackLength % 60}}秒</label>
+        <!-- <label wx:if="{{item.alreadyPlay == item.time}}" class="alreadyPlayText">已听完</label>
+       <label wx:else class="alreadyPlayText" hidden="{{item.alreadyPlay == 0}}">已听：{{item.alreadyPlay / 60}}分{{item.alreadyPlay % 60}}秒</label> -->
+      </view>
+    </view>
+  </view>
+</template>

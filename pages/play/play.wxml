@@ -1,0 +1,94 @@
+<!--pages/play/play.wxml-->
+<view class="play_backgroundView">
+  <view class="play_headerView">
+    <image class="play_imageView" src="{{currentSong.coverUrl}}"></image>
+  <label class="play_title">{{currentSong.title}}</label>
+  <label class="play_detail">{{currentSong.content}}</label>
+  </view>
+  <view class="play_midleView">
+    <view bindtap="collectBtnClicked">
+      <image wx:if="{{currentSong.collection}}" class="play_collection" src="../../scr/Collection.png"></image>
+    <image wx:else class="play_collection" src="../../scr/Notcollected.png"></image>
+    </view>
+
+    <view bindtap="shareBtnClicked">
+
+      <button class="shareBtn" size="mini" open-type="share" plain="true">
+      <image class="play_share" src="../../scr/shareit.png">
+      </image>
+      </button>
+
+      
+    </view>
+    
+  </view>
+  <view class="play_progreeView">
+    <label class="play_timeLabel">{{currentTime}}</label>
+    <view class="play_slider">
+      <slider class="play_slider" block-size="12" block-color="#E94C5B" activeColor="#E94C5B" backgroundColor="#E5E5E5" step="0.5" value="{{progressValue}}" bindchange="progressViewAction" bindchanging="progressViewActioning"></slider>
+  </view>
+    <label class="play_timeLabel">{{duration}}</label>
+  </view>
+
+  <view class="play_bottomView">
+    <view wx:if="{{playMod == 1}}" class="play_mode" bindtap="changeMod">
+        <image class="play_mode_image" src="../../scr/Singlecycle.png"></image>
+        <label class="play_mode_label">单曲循环</label>
+    </view>
+    <view wx:else class="play_mode" bindtap="changeMod">
+        <image class="play_mode_image" src="../../scr/Listloop.png"></image>
+        <label class="play_mode_label">顺序循环</label>
+    </view>
+
+    <view bindtap="prev">
+      <image class="play_up" src="../../scr/Previous.png" mode="aspectFit"></image>
+    </view>
+    <view bindtap="togglePlaying">
+        <image wx:if="{{playingState == 0}}" class="play_button" src="../../scr/play.png" mode="aspectFit"></image>
+        <image wx:else class="play_button" src="../../scr/stop.png" mode="aspectFit"></image>
+    </view>
+    <view bindtap="next">
+        <image class="play_next" src="../../scr/nextsong.png" mode="aspectFit"></image>
+    </view>
+    <view class="play_list" bindtap="openList">
+        <image class="play_mode_image" src="../../scr/List.png"></image>
+        <label class="play_mode_label">列表</label>
+    </view>
+  </view>
+</view>
+
+<!-- 播放列表 -->
+<view class="cu-modal bottom-modal {{bottomModal ?'show':''}}">
+  <view class="cu-dialog">
+    <view class="courseListCell" wx:for="{{songslist}}" wx:key="id" bindtap="playthis" data-index="{{index}}">
+      <label class="courseListCellSelectedTitle" wx:if="{{index == currentIndex}}">{{item.title}}</label>
+      <label class="courseListCellTitle" wx:else>{{item.title}}</label>
+      <image class="courseListCellImageView" wx:if="{{index == currentIndex}}" src="../../scr/listPlay.png"></image>
+      <image class="courseListCellImageView" wx:else src="../../scr/liststop.png"></image>
+    </view>
+    <view class="cu-bar bg-white" bindtap="hideListView">
+      <view class="closeBtn">关闭</view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class="cu-modal {{ifShowVipNumber?'show':''}}">
+  <view class="cul-dialog">
+      <view class="contentTitle">
+        <label class="titleLabel">请输入会员码</label>
+        <label class="detailLabel">复制然后联系我们获取</label>
+      </view>
+    <input class="inputField" bindinput="bindKeyInput" bindfocus="bindKeyInput" bindblur="bindKeyInput" bindconfirm="bindKeyInput" maxlength="30"></input>
+      <view class="bottomView">
+        <button class="cancelBtn" bindtap="hideVipNumberInputView">
+        复制
+        </button>
+        <button class="sureBtn" bindtap="handleVipNumber">
+        确定
+        </button>
+    </view>
+  </view>
+</view>
+

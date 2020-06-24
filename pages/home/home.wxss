@@ -1,0 +1,126 @@
+/* pages/home/home.wxss */
+@import "/pages/home/bottomView/bottomView.wxss";
+
+page{
+  background-color: white;
+}
+
+.scroll-view {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card-swiper {
+	height: 380rpx !important;
+}
+.card-swiper swiper-item {
+	width: 640rpx !important;
+	left: 10rpx;
+	box-sizing: border-box;
+	padding: 30rpx 0rpx 50rpx 0rpx;
+	overflow: initial;
+}
+
+.card-swiper swiper-item .swiper-item {
+	width: 100%;
+	display: block;
+	height: 320rpx;
+	border-radius: 30rpx;
+	transform: scale(0.9);
+	transition: all 0.2s ease-in 0s;
+	overflow: hidden;
+}
+
+.card-swiper swiper-item.cur .swiper-item {
+	transform: none;
+	transition: all 0.2s ease-in 0s;
+}
+
+.nav .cu-item {
+	height: 90rpx;
+	display: inline-block;
+	line-height: 90rpx;
+	margin: 0 10rpx;
+	padding: 0 20rpx;
+  font-size:32rpx;
+}
+.nav .cu-item.cur {
+	border-bottom: 4rpx solid;
+  border-bottom-color: #FF4C5D;
+  font-size:36rpx;
+}
+.text-color {
+  color:#333333;
+}
+
+
+
+
+/* 弹框 */
+.cul-dialog {
+	position: relative;
+	display: inline-block;
+	/* vertical-align: middle; */
+	margin-left: auto;
+	margin-right: auto;
+	width: 600rpx;
+	max-width: 100%;
+	background-color: white;
+	border-radius: 20rpx;
+	overflow: hidden;
+}
+.contentTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 30rpx;
+}
+.titleLabel {
+  font-size:40rpx;
+  font-family:Heiti SC;
+  color:rgba(51,51,51,1);
+}
+.detailLabel {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  font-size:25rpx;
+  font-family:Heiti SC;
+  color:rgba(153,153,153,1)
+}
+.inputField {
+  height:90rpx;
+  background:rgba(236,236,236,1);
+  border-radius:12px;
+  margin-left: 70rpx;
+  margin-right: 70rpx;
+}
+.bottomView {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 40rpx 0rpx 30rpx 0rpx;
+}
+.cancelBtn {
+  width:200rpx;
+  height:90rpx;
+  background:rgba(70,70,70,1);
+  opacity:0.99;
+  border-radius:12px;
+  font-size:36rpx;
+  font-family:Heiti SC;
+  color:rgba(255,255,255,1);
+}
+.sureBtn {
+  width:200rpx;
+  height:90rpx;
+  background:#FF4C5D;
+  opacity:0.99;
+  border-radius:12px;
+  font-size:36rpx;
+  font-family:Heiti SC;
+  color:rgba(255,255,255,1);
+}
+
+.cellView {
+ margin: 20rpx 20rpx 30rpx 20rpx;  
+}

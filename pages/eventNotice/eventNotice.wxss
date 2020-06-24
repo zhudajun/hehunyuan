@@ -1,0 +1,10 @@
+/* pages/eventNotice/eventNotice.wxss */
+@import "/utils/noticeCell/noticeCell.wxss";
+
+.scrollView {
+  height: 100%;
+  background-color: white;
+}
+.cellView {
+ margin: 30px 20rpx 20rpx 30rpx;  
+}

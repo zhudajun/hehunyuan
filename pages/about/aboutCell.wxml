@@ -1,0 +1,13 @@
+
+<!-- title 
+     imageScr
+-->
+<template name="aboutCell">
+ <view class="aboutCell">
+  <view class="leftView">
+    <image class="leftImage" src="{{item.imageScr}}"></image>
+    <label class="leftLabel">{{item.title}}</label>
+  </view>
+  <image class="rightView" src="../../scr/rightArrow.png"></image>
+ </view>
+</template>

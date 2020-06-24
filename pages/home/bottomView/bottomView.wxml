@@ -1,0 +1,38 @@
+
+<!--
+  id:索引
+  name: 标题
+  content:副标题
+  type: 类型 ‘frere’
+  payCount:购买人数
+  coverUrl:封面图片
+  createTime: 创建时间
+  updateTime: 更新时间
+  price:价格
+  purchase:是否购买
+-->
+
+
+ <template name="homeCell">
+  <view class="courseBackgroundView">
+    <view class="courseImageBgView">
+      <image class="courseImageView" src="{{item.coverUrl}}"></image>
+    </view>
+    <view class="descriptionView">
+      <view class="detailView">
+        <label class="courseTitle">{{item.title}}</label>
+        <label class="courseDetail">{{item.content}}</label>
+      </view>
+      <view class="payBottomView">
+        <label class="payNumberText">{{item.payCount}}人已收听</label>
+        <label wx:if="{{item.price != 0 && !item.ifPay}}" class="payPrice">
+        
+        <!-- ￥{{item.price}} -->
+        
+        </label>
+        <label wx:elif="{{item.ifPay && time.price != 0}}" class="alreadyPayPrice">已购买</label>
+        <label wx:else class="alreadyPayPrice">免费</label>
+      </view>
+    </view>
+  </view>
+</template>

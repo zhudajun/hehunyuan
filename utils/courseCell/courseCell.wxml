@@ -1,0 +1,29 @@
+<!--
+  id:索引
+  name: 标题
+  content:副标题
+  type: 类型
+  payCount:购买人数
+  coverUrl:封面图片
+  createTime: 创建时间
+  updateTime: 更新时间
+  price:价格
+  ifPay:是否购买
+-->
+
+<template name="courseCell">
+  <view class="courseBackgroundView">
+    <view class="courseImageBgView">
+      <image class="courseImageView" src="{{item.coverUrl}}"></image>
+    </view>
+    <view class="descriptionView">
+      <view class="detailView">
+        <label class="courseTitle">{{item.name}}</label>
+        <label class="courseDetail">{{item.content}}</label>
+      </view>
+      <view class="bottomView">
+        <label class="bottomText">{{item.payCount}}人已购买</label>
+      </view>
+    </view>
+  </view>
+</template>

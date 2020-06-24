@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/about/about",
+    "pages/course/course",
+    "pages/collection/collection",
+    "pages/eventNotice/eventNotice",
+    "pages/contactUs/contactUs",
+    "pages/play/play"
+  ],
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FF4C5D",
+    "navigationBarTitleText": "合婚缘",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#FF4C5D",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "scr/Homenotclicked.png",
+        "selectedIconPath": "scr/Homeclickicon.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "我的",
+        "iconPath": "scr/Myunclicked.png",
+        "selectedIconPath": "scr/Myclick.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

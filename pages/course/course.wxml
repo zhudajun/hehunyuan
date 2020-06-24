@@ -1,0 +1,11 @@
+<!--pages/course/course.wxml-->
+<import src="/utils/courseCell/courseCell.wxml" />
+
+<scroll-view class='scrollView' scroll-y='true'>
+
+<view class="cellView" data-course="{{item}}" wx:for="{{list}}" wx:key="id" bindtap="goPlayViewController">
+  <template is="courseCell" data="{{item}}" />
+</view>
+
+</scroll-view>
+

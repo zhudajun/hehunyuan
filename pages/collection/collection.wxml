@@ -1,0 +1,11 @@
+<!--pages/collection/collection.wxml-->
+<import src="/utils/collectionCell/collectionCell.wxml" />
+
+<scroll-view class='scrollView' scroll-y='true' bindscrolltolower='loadMoreData'>
+
+<view class="cellView" data-course="{{item}}" wx:for="{{list}}" wx:key="id" bindtap="goPlayViewController">
+  <template is="collectionCell" data="{{item}}" />
+</view>
+
+</scroll-view>
+

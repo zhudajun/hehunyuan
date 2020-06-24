@@ -1,0 +1,7 @@
+/**app.wxss**/
+@import "colorui/main.wxss";
+
+page{
+  background: rgba(246,246,246,1);
+}
+

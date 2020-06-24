@@ -1,0 +1,257 @@
+/* pages/play/play.wxss */
+
+page{
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+
+.play_backgroundView {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.play_headerView {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.play_imageView {
+  margin-top: 130rpx;
+  width:450rpx;
+  height:450rpx;
+  border-radius:8px;
+}
+
+.play_title {
+  width: 500rpx;
+  margin: 70rpx 30rpx 29rpx 30rpx;
+  font-size:40rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  color:rgba(102,102,102,1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+.play_detail{
+  width: 500rpx;
+  font-size:30rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  color:rgba(221,221,221,1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.play_midleView {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left:100rpx;
+  margin-right: 100rpx; 
+  margin-top: 54rpx;
+}
+.play_collection {
+  width: 23px;
+  height: 20px;
+}
+button[plain] {
+  border: 0rpx;
+}
+.play_share {
+  width: 23px;
+  height: 20px;
+}
+
+.play_progreeView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.play_timeLabel {
+  width: 50rpx;
+  font-size:20rpx;
+  font-family:Heiti SC;
+  font-weight:500;
+  color:rgba(204,204,204,1);
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+}
+.play_slider {
+  width: 90%;
+}
+
+.play_bottomView {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.play_mode {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.play_mode_image {
+  width: 23px;
+  height: 20px;
+}
+.play_mode_label {
+  margin-top: 10rpx;
+  font-size:20rpx;
+  font-family:Heiti SC;
+  font-weight:500;
+  color:rgba(153,153,153,1);
+}
+
+.play_up {
+  width: 22px;
+  height: 45px;
+}
+
+.play_button {
+   width: 60px;
+    height: 60px;
+}
+.play_next {
+   width: 22px;
+   height: 45px;
+}
+
+.play_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cu-bar {
+	display: flex;
+	position: relative;
+	align-items: center;
+	min-height: 100rpx;
+	justify-content: center;
+}
+ .closeBtn {
+   font-size:30rpx;
+   font-family:Heiti SC;
+   color:rgba(102,102,102,1);
+ }
+.cu-dialog {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: auto;
+	margin-right: auto;
+	width: 680rpx;
+	max-width: 100%;
+	background-color: #ffffff;
+	border-radius: 10rpx;
+	overflow: hidden;
+}
+.courseListCell {
+  height: 64rpx;
+  text-align: center;
+  margin: 10px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-style:solid;
+  border-bottom-width: thin;
+  border-bottom-color: #EEEEEE;
+}
+
+.courseListCellTitle {
+  font-size:28rpx;
+  font-family:Heiti SC;
+  color:rgba(102,102,102,1);
+}
+.courseListCellSelectedTitle {
+  font-size:28rpx;
+  font-family:Heiti SC;
+  color:rgba(255,76,93,1);
+}
+.courseListCellImageView {
+  width:18rpx;
+  height:21rpx;
+}
+
+
+
+/* 弹框 */
+.cul-dialog {
+	position: relative;
+	display: inline-block;
+	/* vertical-align: middle; */
+	margin-left: auto;
+	margin-right: auto;
+	width: 600rpx;
+	max-width: 100%;
+	background-color: white;
+	border-radius: 20rpx;
+	overflow: hidden;
+}
+.contentTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 30rpx;
+}
+.titleLabel {
+  font-size:40rpx;
+  font-family:Heiti SC;
+  color:rgba(51,51,51,1);
+}
+.detailLabel {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  font-size:25rpx;
+  font-family:Heiti SC;
+  color:rgba(153,153,153,1)
+}
+.inputField {
+  height:90rpx;
+  background:rgba(236,236,236,1);
+  border-radius:12px;
+  margin-left: 70rpx;
+  margin-right: 70rpx;
+}
+.bottomView {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 40rpx 0rpx 30rpx 0rpx;
+}
+.cancelBtn {
+  width:200rpx;
+  height:90rpx;
+  background:rgba(70,70,70,1);
+  opacity:0.99;
+  border-radius:12px;
+  font-size:36rpx;
+  font-family:Heiti SC;
+  color:rgba(255,255,255,1);
+}
+.sureBtn {
+  width:200rpx;
+  height:90rpx;
+  background:#FF4C5D;
+  opacity:0.99;
+  border-radius:12px;
+  font-size:36rpx;
+  font-family:Heiti SC;
+  color:rgba(255,255,255,1);
+}
+
+.cellView {
+ margin: 20rpx 20rpx 30rpx 20rpx;  
+}

@@ -1,0 +1,25 @@
+<!-- 
+    "id": 1,
+    "title": "测试消息",
+    "author": "admin",
+    "content": "测试通知",
+"createTime": "2019-10-16 11:20:31", "updateTime": "2019-10-16 11:20:31"
+
+ -->
+<template name="noticeCell">
+  <view class="noticeCell">
+    <view class="headerImageBgView">
+      <image class="headerImageView" src="{{item.headerImg}}"></image>
+    </view>
+    <view class="detailView">
+      <view class="noticeHeaderView">
+        <label class="noticeTitle">{{item.author}}</label>
+        <label class="noticeTime">{{item.createTime}}</label>
+      </view>
+      <view class="detailTextView">
+        <label class="detailTitle">{{item.title}}</label>
+        <label class="detailText">{{item.content}}</label>
+      </view>
+    </view>
+  </view>
+</template>

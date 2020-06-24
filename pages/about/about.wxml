@@ -1,0 +1,17 @@
+<!--pages/about/about.wxml-->
+<import src="/pages/about/aboutCell.wxml" />
+
+<view class="backgroudView">
+  <view class="headerView">
+    <open-data class="userImage" type="userAvatarUrl"></open-data>    
+    <view class="userDetail">
+    <open-data class="userName" type="userNickName"></open-data>
+      <image class="vipImage" src="../../scr/VIP.png" hidden="{{ifUserIsVIP}}"></image>
+    </view>
+    <label class="phoneNumber">{{userID}}</label>
+  </view>
+  <view class="cellView" data-item="{{item}}" wx:for="{{list}}" wx:key="index" bindtap="navToViewController">
+    <template is="aboutCell" data="{{item}}" />
+  </view>
+
+</view>

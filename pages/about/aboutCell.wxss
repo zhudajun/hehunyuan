@@ -1,0 +1,32 @@
+.aboutCell {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 20px;
+  height:122rpx;
+  background:rgba(255,255,255,1);
+  box-shadow:0px 4px 16px 0px rgba(77,77,77,0.1);
+  border-radius:8px;
+}
+.leftView {
+  margin-left: 34rpx;
+  display: flex;
+  flex-direction: row;
+}
+.leftImage {
+  height: 20px;
+  width: 20px;
+}
+.leftLabel {
+  margin-left: 26rpx;
+  font-size:32rpx;
+  font-family:PingFang SC;
+  color:rgba(68,68,68,1);
+}
+
+.rightView {
+  margin-right: 34rpx;
+  height: 20px;
+  width: 20px;
+}

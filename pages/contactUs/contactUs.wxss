@@ -1,0 +1,9 @@
+/* pages/contactUs/contactUs.wxss */
+.backgroundView {
+  height: 500px;
+  margin: 41rpx 38rpx 0rpx 38rpx;
+}
+.contactImage {
+  height: 400px;
+  width: 100%;
+}

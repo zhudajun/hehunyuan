@@ -1,0 +1,11 @@
+<!--pages/eventNotice/eventNotice.wxml-->
+
+<import src="/utils/noticeCell/noticeCell.wxml" />
+
+<scroll-view class='scrollView' scroll-y='true' bindscrolltolower='loadMoreData'>
+
+<view class="cellView" data-course="{{item}}" wx:for="{{list}}" wx:key="id" bindtap="goPlayViewController">
+  <template is="noticeCell" data="{{item}}" />
+</view>
+
+</scroll-view>

@@ -1,0 +1,4 @@
+<!--pages/contactUs/contactUs.wxml-->
+<view class="backgroundView">
+  <image class="contactImage" src="{{url}}" mode="aspectFit"></image>
+</view>
